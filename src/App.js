@@ -44,7 +44,9 @@ const User = (props) =>{
     return(
         <div className="user-outer">
             <AvatarComponent Avatar = {Avatar}/>
-           <UserData name = {name} designation= {designation} salary= {salary}/>
+           <UserData name = {name} designation= {designation} salary= {salary} >
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+           </UserData>
 
 
         </div>
@@ -61,13 +63,14 @@ const AvatarComponent = ({Avatar}) =>{
         </div>
     );
 }
-const  UserData = ({name, designation, salary}) =>{
-    
+const  UserData = ({name, designation, salary,children}) =>{
+    console.log(children);
     return(
         <div className="user-data">
             <UserName name = {name}/>
             <Designation designation= {designation}/>
             <Salary salary= {salary}/>
+            <p className="description">{children}</p>
         </div>
     );
 }
