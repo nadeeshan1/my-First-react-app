@@ -48,3 +48,16 @@ body{
 
 
 }
+
+/* search form styles */
+
+.search-outer{
+  width: 100%;
+  height: 100px;
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
